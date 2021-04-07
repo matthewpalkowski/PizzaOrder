@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/Header"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtChoosePizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/YourOrder"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHeading" />
+
+    <Spinner
+        android:id="@+id/spinnerPizza"
+        android:layout_width="159dp"
+        android:layout_height="25dp"
+        android:entries="@array/pizzaArray"
+        app:layout_constraintStart_toStartOf="@+id/txtChoosePizza"
+        app:layout_constraintTop_toBottomOf="@+id/txtChoosePizza" />
+
+    <RadioGroup
+        android:id="@+id/sizeRadioBtnGrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/txtChooseSize"
+        app:layout_constraintTop_toBottomOf="@+id/txtChooseSize">
+
+        <RadioButton
+            android:id="@+id/radioBtnSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Small"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/radioBtnMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Medium"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/radioBtnLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Large"
+            android:textSize="10sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtChooseSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/ChooseSize"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/spinnerPizza"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerPizza" />
+
+    <TextView
+        android:id="@+id/txtTopping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/ChooseToppings"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/sizeRadioBtnGrp"
+        app:layout_constraintTop_toBottomOf="@+id/sizeRadioBtnGrp" />
+
+    <CheckBox
+        android:id="@+id/chkMushroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ToppingMushroom"
+        app:layout_constraintStart_toStartOf="@+id/txtTopping"
+        app:layout_constraintTop_toBottomOf="@+id/txtTopping" />
+
+    <CheckBox
+        android:id="@+id/chkBacon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ToppingBacon"
+        app:layout_constraintStart_toEndOf="@+id/chkMushroom"
+        app:layout_constraintTop_toBottomOf="@+id/txtTopping" />
+
+    <CheckBox
+        android:id="@+id/chkExtraCheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ToppingCheese"
+        app:layout_constraintStart_toEndOf="@+id/chkBacon"
+        app:layout_constraintTop_toBottomOf="@+id/txtTopping" />
+
+    <CheckBox
+        android:id="@+id/chkOnions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ToppingOnions"
+        app:layout_constraintStart_toStartOf="@+id/chkMushroom"
+        app:layout_constraintTop_toBottomOf="@+id/chkMushroom" />
+
+    <CheckBox
+        android:id="@+id/chkOlives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ToppingOlives"
+        app:layout_constraintStart_toEndOf="@+id/chkOnions"
+        app:layout_constraintTop_toBottomOf="@+id/chkBacon" />
+
+    <CheckBox
+        android:id="@+id/chkSpinach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ToppingSpinach"
+        app:layout_constraintStart_toEndOf="@+id/chkOlives"
+        app:layout_constraintTop_toBottomOf="@+id/chkExtraCheese" />
+
+    <CheckBox
+        android:id="@+id/chkSausage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ToppingSausage"
+        app:layout_constraintStart_toEndOf="@+id/chkSpinach"
+        app:layout_constraintTop_toBottomOf="@+id/chkExtraCheese" />
+
+    <TextView
+        android:id="@+id/txtDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/Delivery"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/chkOnions"
+        app:layout_constraintTop_toBottomOf="@+id/chkOnions" />
+
+    <Switch
+        android:id="@+id/deliverySwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toEndOf="@+id/txtDelivery"
+        app:layout_constraintTop_toBottomOf="@+id/chkOlives" />
+
+    <TextView
+        android:id="@+id/txtAddedCharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/Fee"
+        app:layout_constraintStart_toEndOf="@+id/deliverySwitch"
+        app:layout_constraintTop_toBottomOf="@+id/chkOlives"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/Total"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txtDelivery"
+        app:layout_constraintTop_toBottomOf="@+id/txtTax" />
+
+    <TextView
+        android:id="@+id/txtSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="$"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/txtTotal"
+        app:layout_constraintTop_toTopOf="@+id/txtTotal"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="@+id/chkSausage"
+        app:layout_constraintTop_toTopOf="@+id/txtHeading"
+        tools:srcCompat="@drawable/pepperoni" />
+
+    <TextView
+        android:id="@+id/txtTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/Tax"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txtDelivery"
+        app:layout_constraintTop_toBottomOf="@+id/txtDelivery" />
+
+    <TextView
+        android:id="@+id/txtTotalTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@+id/txtTax"
+        app:layout_constraintTop_toTopOf="@+id/txtTax" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

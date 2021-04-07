@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Homework_2</string>
+    <string name="Fee">(+$2.00)</string>
+    <string name="ChooseSize">Choose the Size:</string>
+    <string name="ChooseToppings">Choose the additional topping (+$1.69 each)</string>
+    <string name="Delivery">Delivery</string>
+    <string name="Header">Pizza Order</string>
+    <string name="Tax">Tax:</string>
+    <string name="Total">Total:</string>
+    <string name="YourOrder">Choose Your Pizza:</string>
+
+    <string name="Small">Small ($9.99)</string>
+    <string name="Medium">Medium ($13.99)</string>
+    <string name="Large">Large ($15.99)</string>
+
+    <string name="ToppingMushroom">Mushrooms</string>
+    <string name="ToppingBacon">Bacon</string>
+    <string name="ToppingCheese">Extra Cheese</string>
+    <string name="ToppingOlives">Olives</string>
+    <string name="ToppingOnions">Onions</string>
+    <string name="ToppingSausage">Sausage</string>
+    <string name="ToppingSpinach">Spinach</string>
+
+    <string-array name="pizzaArray">
+        <item>Pepperoni</item>
+        <item>BBQ</item>
+        <item>Margarita</item>
+        <item>Hawaiian</item>
+    </string-array>
+</resources>
